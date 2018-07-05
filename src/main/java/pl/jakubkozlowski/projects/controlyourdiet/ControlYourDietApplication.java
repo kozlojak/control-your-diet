@@ -1,12 +1,18 @@
 package pl.jakubkozlowski.projects.controlyourdiet;
 
+import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ControlYourDietApplication {
+public class ControlYourDietApplication implements CommandLineRunner {
 
 	public static void main(String[] args) {
 		SpringApplication.run(ControlYourDietApplication.class, args);
+	}
+
+	@Override
+	public void run(String... args) throws Exception {
+
 	}
 }
