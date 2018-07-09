@@ -8,7 +8,7 @@ import java.util.List;
 public interface ProductConverter{
 
     ProductTO convertEntity(ProductEntity entity);
-    ProductEntity convertTO(ProductTO tO);
+    ProductEntity convertTO(ProductTO to);
     List<ProductTO>convertListEntity(List<ProductEntity> entityList);
 
 }

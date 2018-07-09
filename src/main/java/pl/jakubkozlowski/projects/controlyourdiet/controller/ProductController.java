@@ -10,7 +10,6 @@ import pl.jakubkozlowski.projects.controlyourdiet.service.ProductService;
 
 import java.util.List;
 
-import static pl.jakubkozlowski.projects.controlyourdiet.controller.descriptor.ProductDescriptor.ALL;
 import static pl.jakubkozlowski.projects.controlyourdiet.controller.descriptor.ProductDescriptor.BY_ID;
 
 @RestController
@@ -35,12 +34,12 @@ public class ProductController {
         return service.findById(id).map(ResponseEntity::ok).orElse(ResponseEntity.badRequest().build());
     }
 
-    @GetMapping
+    @GetMapping(params={"name"})
     public ResponseEntity<List<ProductTO>>findByName(@RequestParam("name") String name){
         return service.findByName(name).map(ResponseEntity::ok).orElse(ResponseEntity.badRequest().build());
     }
 
-    @GetMapping(value=ALL)
+    @GetMapping
     public ResponseEntity<List<ProductTO>>findAll(){
         return service.findAll().map(ResponseEntity::ok).orElse(ResponseEntity.badRequest().build());
     }

@@ -27,14 +27,14 @@ public class ProductEntity implements Serializable {
     private Integer weight;
 
     @Column
-    private Float carbs;
+    private Double carbs;
 
     @Column
-    private Float fat;
+    private Double fat;
 
     @Column
-    private Float proteins;
+    private Double proteins;
 
     @Column
-    private Float cellulose;
+    private Double cellulose;
 }

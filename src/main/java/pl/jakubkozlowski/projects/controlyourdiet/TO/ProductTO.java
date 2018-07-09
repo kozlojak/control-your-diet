@@ -8,10 +8,10 @@ public class ProductTO {
     private String name;
     private String typeOfPreparation;
     private Integer weight;
-    private Float carbs;
-    private Float fat;
-    private Float proteins;
-    private Float cellulose;
+    private Double carbs;
+    private Double fat;
+    private Double proteins;
+    private Double cellulose;
 
 }
 
