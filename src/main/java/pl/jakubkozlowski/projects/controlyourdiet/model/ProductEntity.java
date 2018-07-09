@@ -2,17 +2,16 @@ package pl.jakubkozlowski.projects.controlyourdiet.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.ToString;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.io.Serializable;
 
-@Entity
-@Table(name = "product_general")
+@Entity(name = "product_general")
 @Data
 @AllArgsConstructor
-@ToString
-public class ProductGeneralEntity implements Serializable {
+@NoArgsConstructor
+public class ProductEntity implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -38,15 +37,4 @@ public class ProductGeneralEntity implements Serializable {
 
     @Column
     private Float cellulose;
-
-    public ProductGeneralEntity(String name, String typeOfPreparation, Integer weight, Float carbs, Float fat,
-                                Float proteins, Float cellulose){
-        this.name=name;
-        this.typeOfPreparation=typeOfPreparation;
-        this.weight=weight;
-        this.carbs=carbs;
-        this.fat=fat;
-        this.proteins=proteins;
-        this.cellulose=cellulose;
-    }
 }
